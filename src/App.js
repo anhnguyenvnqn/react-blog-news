@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/auth-context";
 import React, { Suspense } from "react";
-import UserProfileTest from "components/module/user/UserProfileTest";
 
 //Suspense: vào trang nào load trang đó
 //thực hiện một số công việc (như fetch data từ api) trước khi component có thể render.
@@ -124,10 +123,7 @@ function App() {
               path="/profile"
               element={<UserProfile></UserProfile>}
             ></Route>
-            <Route
-              path="/profile-test"
-              element={<UserProfileTest></UserProfileTest>}
-            ></Route>
+            
           </Route>
         </Routes>
         ;

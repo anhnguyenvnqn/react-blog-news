@@ -37,8 +37,7 @@ const HomeFeature = () => {
   return (
     <HomeFeatureStyles className="home-block">
       <div className="container">
-        <Heading>Bài viết nổi bật</Heading>
-        
+        <Heading>Bài viết nổi bật</Heading>   
         {posts.length === 0 &&
         <div className="grid-layout">
           <PostFeatureItemSkeleton></PostFeatureItemSkeleton>

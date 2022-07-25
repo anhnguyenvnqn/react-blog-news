@@ -11,6 +11,8 @@ const PostFeatureItemStyles = styled.div`
   width: 100%;
   border-radius: 16px;
   position: relative;
+  height: 272px;
+
   &:hover img {
     border: 2px solid ${(props) => props.theme.purple};
   }
@@ -49,7 +51,10 @@ const PostFeatureItemStyles = styled.div`
     }
   }
   @media screen and (min-width: 1024px) {
-    height: 272px;
+   
+  }
+  @media screen and (max-width: 1024px) {
+    height: 220px;
   }
 `;
 

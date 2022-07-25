@@ -3,7 +3,7 @@ import styled from "styled-components";
 const TableStyles = styled.div`
   overflow-x: auto;
   background-color: white;
-  border-radius: 10px;
+  
   table {
     width: 100%;
   }
@@ -24,6 +24,12 @@ const TableStyles = styled.div`
     white-space: nowrap;
   }
   tbody {
+  }
+  @media screen and (max-width: 1200px) { 
+    tr th:first-child,
+    tr td:first-child {
+      display: none;
+    }
   }
 `;
 const Table = ({ children }) => {

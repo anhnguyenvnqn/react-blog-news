@@ -45,11 +45,11 @@ const DashboardHeader = () => {
     <DashboardHeaderStyles>
       <NavLink to="/" className="logo">
         <img srcSet="/logo.png 2x" alt="monkey-blogging" className="logo" />
-        <span className="hidden lg:inline-block">Monkey Blogging</span>
+        <span className="hidden lg:inline-block">Blogging</span>
       </NavLink>
       <div className="header-right">
-        <Button to="/manage/add-post" className="header-button" height="52px">
-          Write new post
+        <Button to="/manage/add-post" className="header-button" height="50px">
+          New post
         </Button>
         <Link to="/profile" className="header-avatar">
           <img

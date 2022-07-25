@@ -11,12 +11,17 @@ import { postStatus } from "utils/constants";
 import { v4 } from "uuid";
 import { db } from "../../../firebase-blog/firebase-config-blog";
 import Heading from "../../layout/Heading";
-import PostItem from "../post/PostItem";
+import PostItem, { PostItemSkeleton } from "../post/PostItem";
 
 const HomeListStyle = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 16px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns:1fr 1fr;
+    gap:28px;
+      }
+ 
 `;
 
 const HomeList = () => {
@@ -42,6 +47,14 @@ const HomeList = () => {
     <div className="container">
      <Heading>Tin tức khác </Heading>
       <HomeListStyle>
+        {posts.length === 0 && 
+        <>
+          <PostItemSkeleton></PostItemSkeleton>
+          <PostItemSkeleton></PostItemSkeleton>
+          <PostItemSkeleton></PostItemSkeleton>
+          <PostItemSkeleton></PostItemSkeleton>
+        </>
+        }
         {posts.length > 0 &&
           posts.map((post) => <PostItem data={post} key={v4()}></PostItem>)}
       </HomeListStyle>

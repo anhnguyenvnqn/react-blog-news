@@ -14,7 +14,7 @@ import { Table } from '../../table';
 
 
 const USER_PER_PAGE = 4;
-const UserTable = ({ filter }) => {
+const UserManageTable = ({ filter }) => {
     const [userList, setUserList] = useState([])
     const [total, setTotal] = useState(0)
     const [lastDoc, setLastDoc] = useState()
@@ -103,7 +103,7 @@ const UserTable = ({ filter }) => {
         return (
             <tr key={user.id}>
                 <td>{user.id.slice(0, 5) + "..."}</td>
-                <td>{user?.username}</td>
+                
 
                 <td className='whitespace-nowrap'>
                     <div className='flex items-center gap-x-3'>
@@ -156,8 +156,7 @@ const UserTable = ({ filter }) => {
             <Table>
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>UserName</th>
+                        <th>Id</th>     
                         <th>Info</th>
                         <th>Email address</th>
                         <th>Status</th>
@@ -183,5 +182,5 @@ const UserTable = ({ filter }) => {
     );
 };
 
-export default UserTable;
+export default UserManageTable;
 

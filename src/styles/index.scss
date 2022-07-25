@@ -58,6 +58,7 @@ h6 {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 a {
   text-decoration: none;
@@ -82,8 +83,11 @@ a {
   }
   @media screen and (min-width:1024px) {
     grid-template-columns: repeat(3,minmax(0,1fr));
-    gap:48px;
-    
+       
+  }
+  @media screen and (max-width:1024px) {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap:28px;
   }
 }
 .form-layout {

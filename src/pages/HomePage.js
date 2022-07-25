@@ -9,7 +9,6 @@ import HomeNewest from '../components/module/home/HomeNewest';
 const HomePageStyle = styled.div`
 
 `
-
 const HomePage = () => {
     useEffect(() => {
         document.title = "Blogging - HomePage";

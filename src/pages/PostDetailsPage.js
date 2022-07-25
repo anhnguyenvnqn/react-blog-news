@@ -53,10 +53,10 @@ const PostDetailsPageStyles = styled.div`
     display: flex;
     border-radius: 20px;
     background-color: ${(props) => props.theme.grayF3};
-    height: 200px;
+    height: 120px;
     overflow: hidden;
     &-image {
-      width: 200px;
+      width: 120px;
       height: 100%;
       flex-shrink: 0;
       border-radius: inherit;
@@ -96,16 +96,11 @@ const PostDetailsPageStyles = styled.div`
         font-size: 26px;
       }
       &-content {
-        margin: 40px 0;
+      
       }
     }
-    .author {
-      flex-direction: column;
-      &-image {
-        width: 100%;
-        height: auto;
-      }
-    }
+   
+    
   }
 `;
 

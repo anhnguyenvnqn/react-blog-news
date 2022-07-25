@@ -36,6 +36,7 @@ ${props => props.kind === "primary" && css`
     opacity: 0.5;
     pointer-events: none;
 }
+
 `
 /**
  * @param {*} onClick Handler onClick

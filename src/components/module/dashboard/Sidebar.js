@@ -23,8 +23,10 @@ const SidebarStyles = styled.div`
       color: ${(props) => props.theme.primary};
     }
   }
-  @media screen and (max-width: 1023.98px) {
-    display: none;
+  @media screen and (max-width: 1400px) {
+    /* display: none; */
+    display: flex;
+    justify-content: space-between;
   }
 `;
 const sidebarLinks = [

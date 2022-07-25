@@ -13,10 +13,10 @@ const menuLinks = [
     url: "/myproject",
     title: "My Project",
   },
-  {
-    url: "/contact",
-    title: "Contact",
-  },
+  // {
+  //   url: "/contact",
+  //   title: "Contact",
+  // },
 ];
 
 const HeaderStyle = styled.header`
@@ -50,7 +50,7 @@ const HeaderStyle = styled.header`
     }
   }
 
-  .search {
+  /* .search {
     margin-left: auto;
     align-items: center;
     position: relative;
@@ -72,7 +72,7 @@ const HeaderStyle = styled.header`
     top: 50%;
     right: 25px;
     transform: translateY(-50%);
-  }
+  } */
   .header-button {
     margin-left: 20px;
   }
@@ -80,8 +80,16 @@ const HeaderStyle = styled.header`
       display: flex;
       align-items: center;
       gap: 20px;
+      strong {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
       span {
-        color: ${props => props.theme.primary};;
+        color: ${props => props.theme.primary};
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
       .avatar {
         width: 52px;
