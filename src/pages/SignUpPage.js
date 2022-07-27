@@ -45,13 +45,13 @@ const SignUpPage = () => {
   });
 
   const handleSignUp = async (values) => {
-    if (!isValid) return;
     //authentication tạo user
     const user = await createUserWithEmailAndPassword(
       auth,
       values.email,
       values.password
     );
+  
     //sau khi tạo tài khoản xong cập nhập profile
     await updateProfile(auth.currentUser, {
       displayName: values.fullname,

@@ -17,7 +17,6 @@ const HomeFeatureStyles = styled.div`
 
 const HomeFeature = () => {
   const [posts, setPosts] = useState([]);
-  console.log(posts);
   useEffect(() => {
     const colRef = collection(db, "posts");
     const querys = query(colRef, where("hot", "==", true), limit(4));

@@ -80,7 +80,7 @@ const UserProfile = () => {
             if (!userInfo.uid) return
             const colRef = doc(db, "users", userInfo.uid)
             const docData = await getDoc(colRef)
-            console.log(docData);
+            
             reset(docData && docData.data())
         }
         fetchData()
